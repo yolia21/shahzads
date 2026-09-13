@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahzad's Halal Food | 100% Halal Platters, Gyros, Burgers & Wings | New Brunswick, NJ</title>
+  <meta name="description" content="Shahzad's Halal Food in New Brunswick, NJ. 100% Certified Halal. Famous Chicken Over Rice, Gyros, Wings, Philly Cheesesteaks & Burgers. Open daily from 10:00 AM to 2:25 AM for pickup & delivery via DoorDash, Uber Eats, Grubhub.">
+  
+  <!-- Google Fonts: Bebas Neue (Street Food / Hip Hop display), Amiri (Humble Islamic Calligraphy style), Outfit & Inter (Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Righteous&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-halal-badge">
+          <i class="fa-solid fa-kaaba"></i> 100% CERTIFIED HALAL
+        </span>
+        <span class="top-hours-badge">
+          <i class="pulse-dot"></i> <strong id="live-status-text">OPEN NOW</strong> • Online Pickup & Delivery: <strong>10:00 AM – 2:25 AM</strong> (Store Closes ~ 3:00 AM)
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:8482021430" class="top-phone"><i class="fa-solid fa-phone"></i> (848) 202-1430</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="brand-logo">
+          <img src="/images/logo.png" alt="Shahzad's Halal Food Logo">
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#menu" class="nav-link active">Digital Menu Board</a></li>
+          <li><a href="#sauces" class="nav-link">House Sauces</a></li>
+          <li><a href="#reviews" class="nav-link">Customer Reviews</a></li>
+          <li><a href="#hours-location" class="nav-link">Hours & Location</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="order-btn-primary" onclick="openOrderModal()">
+            <i class="fa-solid fa-motorcycle"></i> ORDER ONLINE
+          </button>
+          <button class="mobile-toggle" id="mobile-toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badges-row">
+            <span class="badge-halal">
+              <i class="fa-solid fa-certificate"></i> 100% HALAL CERTIFIED
+            </span>
+            <span class="badge-rating">
+              <i class="fa-solid fa-star text-gold"></i> 4.9 ★ GOOGLE RATED
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            SHAHZAD'S <span class="text-street">HALAL FOOD</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Famous Chicken Over Rice, juicy Gyros, crispy Wings, Philly Cheesesteaks & Burgers. Prepared fresh daily with Shahzad’s signature white and hot sauces.
+          </p>
+
+          <!-- PROMINENT BUSINESS HOURS BANNER -->
+          <div class="hours-banner-hero">
+            <i class="fa-solid fa-clock text-gold" style="font-size: 1.5rem;"></i>
+            <div>
+              <strong style="display: block; font-family: var(--font-street); font-size: 1.2rem; letter-spacing: 0.05em; color: #fff;">
+                NEW BRUNSWICK OPERATING HOURS
+              </strong>
+              <span style="color: var(--color-text-muted); font-size: 0.9rem;">
+                <strong>Mon – Sat: 10:00 AM – 3:00 AM</strong> • <strong>Sunday: 12:00 PM – 3:00 AM</strong>
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <button onclick="openOrderModal()" class="btn-order-glow">
+              <i class="fa-solid fa-bag-shopping"></i> ORDER ONLINE NOW
+            </button>
+            <a href="tel:8482021430" class="btn-secondary">
+              <i class="fa-solid fa-phone"></i> CALL (848) 202-1430
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img src="/images/food-spread.jpg" alt="Shahzad's Halal Food Spread">
+            <div class="floating-badge">
+              <div class="floating-badge-icon">
+                <i class="fa-solid fa-kaaba"></i>
+              </div>
+              <div>
+                <strong style="color: #fff; font-family: var(--font-street); font-size: 1.1rem; letter-spacing: 0.05em; display: block;">
+                  100% CERTIFIED HALAL
+                </strong>
+                <span style="color: var(--color-text-muted); font-size: 0.8rem;">
+                  Fresh Meats & Authentic Spices
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT STRIP -->
+  <section class="highlight-strip">
+    <div class="container">
+      <div class="strip-grid">
+        <div class="strip-item">
+          <i class="fa-solid fa-kaaba text-gold"></i> 100% CERTIFIED HALAL MEATS
+        </div>
+        <div class="strip-item">
+          <i class="fa-solid fa-moon text-red"></i> OPEN LATE NIGHT TILL 2:25 AM
+        </div>
+        <div class="strip-item">
+          <i class="fa-solid fa-fire-flame-curved text-gold"></i> FAMOUS WHITE & HOT SAUCES
+        </div>
+        <div class="strip-item">
+          <i class="fa-solid fa-motorcycle text-green"></i> FAST PICKUP & DELIVERY
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTROLS SECTION (SEARCH & CATEGORY TABS) -->
+  <section class="menu-controls-section" id="menu">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="badge-halal" style="margin-bottom: 0.5rem; display: inline-flex;">
+          <i class="fa-solid fa-list-check"></i> Complete Digital Menu Board
+        </span>
+        <h2 style="font-family: var(--font-street); font-size: 3.2rem; letter-spacing: 0.05em; color: #fff;">
+          SHAHZAD'S FULL MENU
+        </h2>
+      </div>
+
+      <div class="search-bar-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="menu-search-input" class="search-input" placeholder="Search platters, gyros, wings, cheesesteaks, sides...">
+      </div>
+
+      <div class="categories-scroll" id="categories-container">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU ITEMS GRID SECTION (TEXT-DRIVEN DIGITAL BOARD CARDS) -->
+  <section class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="current-category-title">
+          <i class="fa-solid fa-utensils text-red"></i> Platters & Kababs
+        </h2>
+        <p class="section-subtitle" id="current-category-subtitle">
+          Served with regular or spicy basmati rice, side salad, and signature sauces.
+        </p>
+      </div>
+
+      <div class="menu-grid" id="menu-grid-container">
+        <!-- Digital Board Cards Rendered dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SHAHZAD SAUCES SHOWCASE -->
+  <section class="sauces-section" id="sauces">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+        <div class="badge-halal" style="margin-bottom: 0.8rem;">
+          <i class="fa-solid fa-fire-flame-curved"></i> House Recipes
+        </div>
+        <h2 style="font-family: var(--font-street); font-size: 2.8rem; letter-spacing: 0.05em;">SHAHZAD'S FAMOUS SAUCES</h2>
+        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">
+          Every platter & gyro includes your choice of house-made sauces. Extra sauce cups are available for $0.75 each!
+        </p>
+      </div>
+
+      <div class="sauces-grid" id="sauces-grid-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS & TESTIMONIALS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+        <div>
+          <div class="badge-rating">
+            <i class="fa-solid fa-star"></i> 4.9 GOOGLE RATED (100+ REVIEWS)
+          </div>
+          <h2 style="font-family: var(--font-street); font-size: 2.8rem; letter-spacing: 0.05em; margin-top: 0.5rem;">WHAT OUR CUSTOMERS SAY</h2>
+        </div>
+        <a href="https://maps.google.com/?q=152+Easton+Ave,+New+Brunswick,+NJ+08901" target="_blank" class="btn-secondary" style="font-size: 0.9rem;">
+          <i class="fa-brands fa-google"></i> View Reviews on Google
+        </a>
+      </div>
+
+      <div class="reviews-grid" id="reviews-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMINENT HOURS & LOCATIONS SECTION -->
+  <section class="locations-section" id="hours-location">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem;">
+        <div class="badge-halal" style="margin-bottom: 0.8rem;">
+          <i class="fa-solid fa-clock"></i> Open Late Night
+        </div>
+        <h2 style="font-family: var(--font-street); font-size: 3rem; letter-spacing: 0.05em;">BUSINESS HOURS & LOCATIONS</h2>
+        <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-top: 0.5rem;">
+          Order online for pickup or delivery from <strong>10:00 AM to 2:25 AM daily</strong>. Physical store location typically open until ~ 3:00 AM.
+        </p>
+      </div>
+
+      <div class="locations-grid" id="locations-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER PLATFORM CHOOSER MODAL (DOORDASH, UBER EATS, GRUBHUB, SEAMLESS, POSTMATES) -->
+  <div class="modal-overlay" id="order-modal">
+    <div class="modal-box">
+      <button class="close-btn" style="position: absolute; top: 1.5rem; right: 1.5rem;" onclick="closeOrderModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="badge-halal" style="margin-bottom: 0.5rem;">
+          <i class="fa-solid fa-motorcycle"></i> OFFICIAL ONLINE ORDERING
+        </span>
+        <h2 style="font-family: var(--font-street); font-size: 2.4rem; letter-spacing: 0.05em; color: #fff;">
+          CHOOSE YOUR ORDER PLATFORM
+        </h2>
+        <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+          Select your favorite delivery or pickup service for Shahzad's Halal Food (152 Easton Ave, New Brunswick, NJ).
+        </p>
+      </div>
+
+      <div class="order-platforms-grid">
+        <!-- DoorDash Direct (Featured) -->
+        <a href="https://order.online/store/-25676460/?delivery=true&hideModal=true&utm_source=gfo&rwg_token=AE37R_gKW56G9Vz_HBBEbjrzEowdcOejlrdUd3jEsDk9DmCLiLJTaGBPnATblLzxD00ryF9REh8vt1YwwBV-MNWl_J0OaEMU_g%3D%3D" target="_blank" class="platform-btn featured-doordash">
+          <div class="platform-icon"><i class="fa-solid fa-store"></i></div>
+          <div>
+            <strong>DoorDash Direct Ordering (Recommended)</strong>
+            <span>Order directly for Pickup or Delivery</span>
+          </div>
+          <i class="fa-solid fa-arrow-right platform-arrow"></i>
+        </a>
+
+        <!-- Uber Eats -->
+        <a href="https://www.ubereats.com/store/shahzads-halal-food-new-brunswick/TciLZWK0VCKH8_XwORWDnA?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_izAcUYmr6RlfnptzeyKRwK9bg1yWFCuFN-nkV29186BrrVBMHyG49MGvjqQEQ5KEu0-aP3yEeG7b8PNMxk9RTT0RyBkw%3D%3D" target="_blank" class="platform-btn ubereats">
+          <div class="platform-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div>
+            <strong>Uber Eats</strong>
+            <span>Order Pickup or Delivery on Uber Eats</span>
+          </div>
+          <i class="fa-solid fa-arrow-right platform-arrow"></i>
+        </a>
+
+        <!-- Grubhub -->
+        <a href="https://www.grubhub.com/restaurant/shahzads-halal-food-152a-easton-avenue-new-brunswick/14659400?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AE37R_hyQctMFR1CSMopDEYsMsF1i3ZxO_oz82NXJxCz7awlG5h2Lrd6cU4E8vJVHzQk6nelL3rvwd0hIjsAu3kIQ02XdmFRyg%3D%3D" target="_blank" class="platform-btn grubhub">
+          <div class="platform-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div>
+            <strong>Grubhub</strong>
+            <span>Order on Grubhub</span>
+          </div>
+          <i class="fa-solid fa-arrow-right platform-arrow"></i>
+        </a>
+
+        <!-- DoorDash Storefront -->
+        <a href="https://www.doordash.com/store/shahzad%27s-halal-food-new-brunswick-25676460/?utm_campaign=gpa&pickup=true&rwg_token=AE37R_gFwN2XSL1f9Vqn81HkxUfEajld48IUGHnSEM-tfpUAh1KEfYVIHihQ91c69t-9XP-uIzcw7ciTL3ZPYpLCmrbwEqJU2A%3D%3D" target="_blank" class="platform-btn doordash-store">
+          <div class="platform-icon"><i class="fa-solid fa-burger"></i></div>
+          <div>
+            <strong>DoorDash App & Website</strong>
+            <span>DoorDash Main Store Page</span>
+          </div>
+          <i class="fa-solid fa-arrow-right platform-arrow"></i>
+        </a>
+
+        <!-- Seamless -->
+        <a href="https://www.seamless.com/menu/shahzads-halal-food-152a-easton-avenue-new-brunswick/14659400?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AE37R_gWHd9mOnN22LNMJ03O7tA7GJGGwAIHXuHtPdn1n9nuzjMzh6MI7U2JWyRGFT1h3I_ZUW5R_887tszg4YMvbpuS7hIRzQ%3D%3D" target="_blank" class="platform-btn seamless">
+          <div class="platform-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div>
+            <strong>Seamless</strong>
+            <span>Order on Seamless</span>
+          </div>
+          <i class="fa-solid fa-arrow-right platform-arrow"></i>
+        </a>
+
+        <!-- Postmates -->
+        <a href="https://postmates.com/store/shahzads-halal-food-new-brunswick/TciLZWK0VCKH8_XwORWDnA?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_iAPAxdYOI0H7FYP4BY9umoWfmhbh-YjU0ss2PdGyXiVS63avzFRB2n8x5aBBirSyfaOrSmVKzyT_leUlzJ1AZfglqa_Q%3D%3D" target="_blank" class="platform-btn postmates">
+          <div class="platform-icon"><i class="fa-solid fa-motorcycle"></i></div>
+          <div>
+            <strong>Postmates</strong>
+            <span>Order on Postmates</span>
+          </div>
+          <i class="fa-solid fa-arrow-right platform-arrow"></i>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+        Or call us directly for phone pickup: <a href="tel:8482021430" style="color: var(--color-gold); font-weight: 700;">(848) 202-1430</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Shahzad's Logo" style="height: 54px;">
+          <p>
+            New Brunswick's premier spot for authentic 100% Halal street food. Famous platters, gyros, burgers, and crispy wings.
+          </p>
+          <div style="margin-top: 1rem;" class="badge-halal">
+            <i class="fa-solid fa-certificate"></i> 100% CERTIFIED HALAL
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Order Online</h4>
+          <ul>
+            <li><a href="https://order.online/store/-25676460/?delivery=true&hideModal=true" target="_blank">DoorDash Direct</a></li>
+            <li><a href="https://www.ubereats.com/store/shahzads-halal-food-new-brunswick/TciLZWK0VCKH8_XwORWDnA" target="_blank">Uber Eats</a></li>
+            <li><a href="https://www.grubhub.com/restaurant/shahzads-halal-food-152a-easton-avenue-new-brunswick/14659400" target="_blank">Grubhub</a></li>
+            <li><a href="https://www.seamless.com/menu/shahzads-halal-food-152a-easton-avenue-new-brunswick/14659400" target="_blank">Seamless</a></li>
+            <li><a href="https://postmates.com/store/shahzads-halal-food-new-brunswick/TciLZWK0VCKH8_XwORWDnA" target="_blank">Postmates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Business Hours & Contact</h4>
+          <ul>
+            <li><i class="fa-solid fa-location-dot text-red"></i> 152 Easton Ave, New Brunswick, NJ</li>
+            <li><i class="fa-solid fa-phone text-gold"></i> (848) 202-1430</li>
+            <li><i class="fa-solid fa-clock text-green"></i> <strong>Online Pickup:</strong> 10:00 AM – 2:25 AM</li>
+            <li><i class="fa-solid fa-store text-gold"></i> <strong>Store Closes:</strong> ~ 3:00 AM</li>
+            <li><i class="fa-solid fa-dollar-sign"></i> $10 – $20 per person</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Shahzad's Halal Food. All rights reserved. 100% Certified Halal Restaurant.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
