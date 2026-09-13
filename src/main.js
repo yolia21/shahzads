@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderReviews();
   renderLocations();
   setupEventListeners();
+  setupScrollSpy();
+  setupMobileMenu();
   checkStoreStatus();
 });
 
@@ -53,6 +55,77 @@ function checkStoreStatus() {
       elements.liveStatusText.style.color = '#f87171';
     }
   }
+}
+
+// --- SCROLL SPY & ACTIVE NAV LINK HIGHLIGHTING ---
+function setupScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const desktopLinks = document.querySelectorAll('.nav-link');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function updateActiveNav() {
+    let scrollY = window.scrollY;
+
+    sections.forEach(section => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 140;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        desktopLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+
+        mobileLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
+}
+
+// --- MOBILE MENU DRAWER CONTROLLER ---
+window.closeMobileMenu = () => {
+  const overlay = document.getElementById('mobile-menu-overlay');
+  if (overlay) overlay.classList.remove('open');
+};
+
+function setupMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-toggle-btn');
+  const closeBtn = document.getElementById('mobile-menu-close-btn');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (toggleBtn && overlay) {
+    toggleBtn.onclick = () => overlay.classList.add('open');
+  }
+
+  if (closeBtn && overlay) {
+    closeBtn.onclick = () => overlay.classList.remove('open');
+  }
+
+  if (overlay) {
+    overlay.onclick = (e) => {
+      if (e.target === overlay) overlay.classList.remove('open');
+    };
+  }
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      overlay.classList.remove('open');
+    });
+  });
 }
 
 // --- RENDER CATEGORY TABS ---
