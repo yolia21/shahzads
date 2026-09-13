@@ -38,9 +38,9 @@ function checkStoreStatus() {
   const minutes = now.getMinutes();
   const timeInMinutes = hours * 60 + minutes;
   
-  // Open between 10:00 AM (600 mins) and 2:25 AM (145 mins next day)
+  // Open between 10:00 AM (600 mins) and 3:00 AM (180 mins next morning)
   const openTime = 10 * 60; // 600
-  const closeTime = 2 * 60 + 25; // 145 (next morning)
+  const closeTime = 3 * 60;  // 180 (3:00 AM next morning)
   
   const isOpen = (timeInMinutes >= openTime) || (timeInMinutes < closeTime);
   
@@ -49,7 +49,7 @@ function checkStoreStatus() {
       elements.liveStatusText.textContent = 'OPEN NOW';
       elements.liveStatusText.style.color = '#4ade80';
     } else {
-      elements.liveStatusText.textContent = 'CLOSED (Opens 10 AM)';
+      elements.liveStatusText.textContent = 'CLOSED';
       elements.liveStatusText.style.color = '#f87171';
     }
   }
